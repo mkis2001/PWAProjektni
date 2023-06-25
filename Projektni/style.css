@@ -1,0 +1,520 @@
+*{
+    margin:0;
+    --black: #353535;
+    --white: #F9F8F4;
+    --primary: #FFBE00;
+    --primaryDark: #ce9b00;
+    --primaryTran: #ffbf006a;
+    --background: #D6D9DD;
+    --footer: #5A5F65;
+    --red: rgb(192, 0, 0);
+    --redDark: rgb(138, 2, 2);
+    
+    --tran: 0.25s;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+body{
+    background-color: var(--background);
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
+    transition: var(--tran);
+}
+
+h2{
+    font-size:larger;
+}
+
+pre{
+    margin: 0px;
+    white-space: pre-wrap;
+}
+
+.hrDiv{
+    border:0.5px solid var(--background);
+    height: 0px;
+    width:100%;
+}
+
+label{
+    color:var(--footer);
+    font-style: italic;
+}
+
+@media(min-width:1000px){
+    *{
+        --sirina: 60%;
+    }
+}
+
+@media(max-width:999px){
+    *{
+        --sirina:95%;
+    }
+}
+
+
+/*-----HEADER-----*/
+header{
+    display: flex;
+    justify-content: center;
+    background-color: var(--white);
+    border-bottom: 4px solid var(--primary);
+    width:100%;
+    top:0;
+    box-shadow: 0px 3px 10px #00000038;
+}
+
+header img{
+    padding: 5px 0;
+}
+
+/*-----NAV-----*/
+nav{
+    width:var(--sirina);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+nav img{
+    width:25%;
+}
+
+header a, .link>button{
+    color: var(--black);
+    font-size: smaller;
+    text-transform: uppercase;
+    padding: 10 0px;
+    transition:var(--tran);
+    box-shadow: 0 0 0;
+    border: 0;
+}
+
+.link>button:hover{
+    background-color: var(--white);
+    color:var(--primary);
+}
+.link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link p{
+    color: var(--footer);
+    margin-top: 5px;
+    font-size: smaller;
+}
+
+
+header a:hover{
+    color:var(--primary);
+    transition:var(--tran);
+}
+nav > form{
+    width:75%;
+    height: 100%;
+    margin-left: 5%;
+    /*display: flex;
+    margin-left: 10%;
+    align-items: center;
+    justify-content: space-between;*/
+}
+.linkovi{
+    width:100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link{
+    height: 100%;
+    width:100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-bottom:4px solid transparent;
+    transition: var(--tran);
+}
+
+
+.link:hover{
+    border-bottom: 4px solid var(--primaryTran);
+    transition: var(--tran);
+}
+
+@media(max-width:750px){
+    nav{
+        flex-direction: column;
+    }
+
+    nav img{
+        width:50%;
+    }
+
+    .linkovi{
+        width:100%;
+        flex-direction: column;
+        margin-left: 0;
+
+    }
+
+    .link>button{
+        font-size: larger;
+    }
+
+    .link{
+        padding:10px 0;
+    }
+
+    .link a{
+        font-size: larger;
+    }
+}
+
+/*-----SECTION-----*/
+content{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: var(--background);
+}
+
+/*-----ARTICLE-----*/
+article{
+    width:var(--sirina);
+    background-color: var(--white);
+    color: var(--black);
+    box-shadow: 5px 3px 10px #00000038;
+    margin-bottom: 10px;
+    transition: var(--tran);
+}
+#login{
+    height: 550px;
+}
+
+
+.naslovSekcija{
+    width:100%;
+    background-color: var(--primary);
+    text-transform: uppercase;
+    color:var(--white);
+    padding: 15px 0;
+}
+
+.naslovSekcija h2{
+    margin-left: 20px;
+    font-size: medium;
+}
+
+.sadrzaj{
+    display:flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--background);
+    transition: var(--tran);
+}
+
+.slika{
+    width:35%;
+    margin:15px;
+}
+
+.slika img{
+    border-bottom: 4px solid var(--primary);
+}
+
+.tekst{
+    width:65%;
+    margin-top: 20px;
+    margin-right: 15px;
+    line-height: 20px;
+    font-size: smaller;
+    color: var(--black);
+}
+
+.tekst h3{
+    color: var(--black);
+    margin-bottom: 15px;
+    line-height: 35px;
+    font-size:xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    white-space: pre-wrap;
+}
+
+
+
+/*-----ARTICLE PAGE-----*/
+.sadrzajArticle{
+    display: flex;
+    flex-direction: column;
+    margin:15px 50px;
+}
+
+.sadrzajArticle .slika{
+    width:100%;
+    margin:0;
+}
+
+.sadrzajArticle h3{
+    margin-bottom: 20px;
+}
+
+.datum{
+    color:#5A5F65;
+    width: 100%;
+    font-size: x-small;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;   
+    align-items: center;
+}
+
+.sadrzajArticle .tekst{
+    width:100%;
+}
+
+.tekst p{
+    margin-bottom: 15px;
+}
+
+.uvod{
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.forma{
+    display:flex;
+    width:80%;
+    flex-direction: column;
+    align-items:center;
+}
+
+@media(max-width:750px){
+    .forma{
+        width:100%;
+        
+    }
+}
+
+.forma > *{
+    margin:5px 0;
+}
+
+.forma > span{
+    color:var(--red);
+    font-style: italic;
+}
+
+form .error{
+    color:var(--red);
+    border-color: var(--red);
+}
+
+input, select, textarea{
+    border:1px solid var(--background);
+    box-shadow: 5px 3px 10px #0000001d;
+    border-radius: 5px;
+    transition: var(--tran);
+}
+
+button{
+    border-radius: 5px;
+    font-size: larger;
+    color:var(--primary);
+    padding:5px 10px;
+    border:0px;
+    background-color: var(--white);
+    border:1px solid var(--primary);
+    box-shadow: 5px 3px 10px #0000001d;
+    transition: var(--tran);
+}
+
+button:hover{
+    color:var(--white);
+    background-color: var(--primary);
+    padding: 5px 13px;
+    transition:var(--tran);
+    cursor: pointer;
+}
+
+.clanakButton{
+    border:0;
+    text-align: left;
+    border-radius: 0;
+    padding:0;
+    box-shadow: 0 0 0;
+}
+
+.clanakButton:hover{
+    background-color: var(--white);
+    color:var(--primary);
+}
+
+.clanakButton:hover > .sadrzaj{
+    padding: 5px 0;
+}
+
+
+.clanakButton:hover .tekst > h3{
+    color:var(--primary);
+    transition:var(--tran);
+}
+
+.clanakButton .tekst > h3{
+    transition: var(--tran);
+}
+
+@media(max-width:750px){
+    .sadrzaj{
+        flex-direction: column-reverse;
+        padding:15px;
+    }
+
+    .clanakButton:hover .sadrzaj{
+        padding:25px 15px;
+    }
+
+    .slika{
+        width:100%;
+        margin:0;
+    }
+
+    .tekst{
+        font-size: larger;
+        margin-bottom: 25px;
+        line-height: 30px;
+        width:100%;
+    }
+
+    .tekst h3{
+        margin-bottom: 25px;
+    }
+}
+
+.ponisti{
+    border: 1px solid var(--red);
+    color: var(--red);
+}
+
+.ponisti:hover{
+    background-color: var(--red);
+}
+
+.ponisti:active{
+    background-color: var(--redDark);
+    transition: var(--tran);
+}
+
+#unesi:active{
+    background-color: var(--primaryDark);
+    transition: var(--primaryDark);
+}
+
+input::file-selector-button{
+    color:var(--footer);
+    background-color: var(--white);
+    border: 1px solid var(--background);
+    border-radius: 5px;
+    padding:5px;
+    transition:var(--tran);
+}
+input::file-selector-button:hover{
+    padding:5px 10px;
+    background-color: var(--footer);
+    color: var(--white);
+    border-color: var(--footer);
+    transition:var(--tran);
+    cursor: pointer;
+}
+input::file-selector-button:active{
+    background-color: var(--black);
+    transition: var(--tran);
+}
+
+.adminTablica{
+    width:100%;
+    border-collapse: collapse;
+}
+.adminTablica td{
+    width: 33%;
+}
+.adminVijest{
+    border-bottom: 2px solid var(--background);
+}
+
+.adminVijest img{
+    margin: 15px;
+}
+
+@media(max-width:750px){
+    .adminTablica tr{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .adminTablica td{
+        text-align: center;
+        margin: 20px;
+        width:80%;
+    }
+    .adminVijest img{
+        margin:0;
+    }
+}
+
+
+/*-----FOOTER-----*/
+footer{
+    width:100%;
+    bottom:0px;
+    display:flex;
+    padding:30px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--footer);
+    color: var(--background);
+    font-size: small;
+    box-shadow: 0px -3px 10px #00000038;
+}
+
+footer > p:first-child{
+    font-size: larger;
+    color:var(--background);
+    margin-bottom: 10px;
+}
+
+
+/*-----PRIJAVA-----*/
+#prijavaContent{
+    position: absolute;
+    margin-top:100px;
+    display:none;
+    background-color: var(--white);
+    box-shadow: 5px 3px 10px #0000001d;
+    padding: 10px;
+    transition: var(--tran);
+}
+
+
+#prijava:hover{
+    cursor: pointer;
+    color:var(--primary);
+    transition:var(--tran);
+}
+
+#prijava:hover #prijavaContent{
+    cursor: pointer;
+}

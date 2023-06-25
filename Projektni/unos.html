@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unos</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/x-icon" href="slike/favicon.ico">
+        <script src="https://kit.fontawesome.com/b05e340512.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="jquery-1.11.0.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+        <script src="forma.js"></script>
+        <script> 
+            $(function(){
+              $("#header").load("header.php");
+              $("#footer").load("footer.html");
+            });
+        </script>
+        <style>
+            .link[title^="unos"]{
+                border-bottom: 4px solid var(--primary);
+                transition: var(--tran);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <content>
+            <article>
+                <div class="naslovSekcija"><h2>Unos</h2></div>
+                <div class="sadrzajArticle" style="align-items: center;">
+                    <form action="skripta.php" method="post" name="forma" class="forma">
+                        
+                        <label for="naslov">Naslov</label>
+                        <input type="text" id="naslov" name="naslov">
+                        <span id="naslovSpan"></span>
+                        <div class="hrDiv"></div>
+
+                        <label for="uvod">Sažetak</label>
+                        <textarea rows="4" cols="50" name="uvod" id="uvod"></textarea>
+                        <span id="uvodSpan"></span>
+                        <div class="hrDiv"></div>
+
+                        <label for="clanak">Članak</label>
+                        <textarea rows="8" cols="50" name="clanak" id="clanak"></textarea>
+                        <span id="clanakSpan"></span>
+                        <div class="hrDiv"></div>
+
+                        <label for="kategorija">Kategorija</label>
+                        <select name="kategorija" id="kategorija" name="kategorija">
+                            <option value="" disabled selected>--Odaberi kategoriju--</option>
+                            <option value="sport">Sport</option>
+                            <option value="politika">Politika</option>
+                        </select>
+                        <span id="kategorijaSpan"></span>
+                        <div class="hrDiv"></div>
+
+                        <label for="slika">Slika</label>
+                        <input type="file" name="slika" id="slika">
+                        <span id="slikaSpan"></span>
+                        <div class="hrDiv"></div>
+
+                        <div>
+                            <label for="check">Prikaži sadržaj na stranici: </label>
+                            <input type="checkbox" name="check">
+                        </div>
+                        <div class="hrDiv"></div>
+                        <div>
+                        <button type="submit" value="Unesi" id="unesi">Unesi</button>
+                        <button type="reset" value="Poništi" class="ponisti">Poništi</button>
+                        </div>
+                    </form>
+                </div>
+            </article>
+        </content>
+        <script src="forma.js"></script>
+
+        <div id="footer"></div>
+    </body>
+</html>
